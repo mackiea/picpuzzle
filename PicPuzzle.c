@@ -110,6 +110,7 @@ GamePak _pak = {
 };
 */
 
+/*
 GamePak _pak = {
     .x = 10,
     .y = 10,
@@ -125,8 +126,28 @@ GamePak _pak = {
         0b11100001, 0b11000000, 0, 0, 0, 0, 0, 0,
         0b11110011, 0b11000000, 0, 0, 0, 0, 0, 0
     },
-    .name = "Key"
+    .name = "Medium"
 };
+*/
+
+GamePak _pak = {
+    .x = 30,
+    .y = 10,
+    .data = {
+        0b00000000, 0b00000000, 0b00000000, 0b11011100, 0, 0, 0, 0,
+        0b00001000, 0b00011000, 0b00000000, 0b00011100, 0, 0, 0, 0,
+        0b10011100, 0b00001100, 0b01110000, 0b00001100, 0, 0, 0, 0,
+        0b10001000, 0b00000010, 0b01110000, 0b00100000, 0, 0, 0, 0,
+        0b11001000, 0b10000001, 0b00110001, 0b01000100, 0, 0, 0, 0,
+        0b10011100, 0b11111100, 0b11111111, 0b00000100, 0, 0, 0, 0,
+        0b10001000, 0b00011111, 0b11111000, 0b00000000, 0, 0, 0, 0,
+        0b11111111, 0b11110000, 0b00001111, 0b11100100, 0, 0, 0, 0,
+        0b00011100, 0b00001110, 0b00011110, 0b00011000, 0, 0, 0, 0,
+        0b11111000, 0b00111000, 0b00111001, 0b11000100, 0, 0, 0, 0
+    },
+    .name = "Medium"
+};
+
 
 /*
 GamePak _pak = {
@@ -172,9 +193,30 @@ void _logI(int i) {
     _log(entry);
 }
 
+/**
+ * Returns the upper-left point of the playfield.
+ */
+Point CHAR_DIM = { .h=10, .v=14 };
+Point getBitmapOffset(const Game *game) {
+    Point p = {
+        .h=CHAR_DIM.h * game->maxHintCount.h,
+        .v=CHAR_DIM.v * game->maxHintCount.v
+    };
+    return p;
+}
+
+
 void MakeNewWindow(ConstStr255Param title, short procID)
 {
-    _window = NewWindow(NULL, &_initialWindowRect, title, true, procID, (WindowPtr) -1, true, 0);
+    Rect *visibleRect = &((*FrontWindow()->visRgn)->rgnBBox);
+    Rect bounds = { 
+        .left=visibleRect->left,
+        .top=visibleRect->top + LMGetMBarHeight()*2-1,
+        .right= _game.bitmap.bounds.right+5,
+        .bottom=_game.bitmap.bounds.bottom + LMGetMBarHeight()-1+LMGetMBarHeight()-1+5
+        
+    };
+    _window = NewWindow(NULL, &bounds, title, true, procID, (WindowPtr) -1, true, 0);
 }
 
 void InitCustomWDEF()
@@ -330,7 +372,6 @@ void UpdateMenus()
     MenuRef m = GetMenu(kMenuGame);
     WindowRef w = FrontWindow();
     if(w) {
-        // Close menu item: enabled if there is a window
         EnableItem(m,kItemRestart);
         EnableItem(m,kItemSolve);
         EnableItem(m,kItemClose);
@@ -410,7 +451,12 @@ void loadGame(const GamePak *gamePak) {
             _game.maxHintCount.v = _game.column[x].count;
         }
     }
-    
+  
+    Rect *visibleRect = &((*FrontWindow()->visRgn)->rgnBBox);
+    _game.bitmap.bounds.left   = visibleRect->left + getBitmapOffset(&_game).h;
+    _game.bitmap.bounds.top    = visibleRect->top + getBitmapOffset(&_game).v;
+    _game.bitmap.bounds.right  = visibleRect->left + getBitmapOffset(&_game).h + _game.x * _game.bitmap.width;
+    _game.bitmap.bounds.bottom = visibleRect->top + getBitmapOffset(&_game).v + _game.y * _game.bitmap.width;
 }
 
 /**
@@ -498,18 +544,6 @@ void DoMenuCommand(long menuCommand)
 }
 
 /**
- * Returns the upper-left point of the playfield.
- */
-Point CHAR_DIM = { .h=10, .v=14 };
-Point getBitmapOffset(const Game *game) {
-    Point p = {
-        .h=CHAR_DIM.h * game->maxHintCount.h,
-        .v=CHAR_DIM.v * game->maxHintCount.v
-    };
-    return p;
-}
-
-/**
  * Draw the hints to the left or above the playing field.
  */
 void drawHints(const Game *game) {
@@ -522,9 +556,6 @@ void drawHints(const Game *game) {
     // Frame around column hints.
     SetRect(&r, offset.h, 0, game->x * game->bitmap.width + offset.h, offset.v);
     FrameRect(&r);
-    // char c[64];
-    // sprintf(c, "Run 0: %d %d, %d %d", game->row[0].count, game->row[0].run[0], game->bitmap.bounds.left, game->bitmap.bounds.top);
-    // _log(c);
 
     // Draw row hints.
     for(Byte y=0;y<game->y;y++) {
@@ -583,70 +614,85 @@ void drawHints(const Game *game) {
     }
 }
 
+inline void updateBit(
+        const Game *game,
+        Byte x,
+        Byte y,
+        const Point *offset,
+        INTEGER y5Div,
+        INTEGER yTop,
+        INTEGER yBottom
+    ) {
+    INTEGER xLeft = x * game->bitmap.width + offset->h;
+    INTEGER xRight = (x+1) * game->bitmap.width + offset->h;
+    Pattern cellColour = qd.gray;
+    enum eTriState state = game->bitmap.guesses[y * GameMaxXY + x];
+    if(state == TRI_FALSE) {
+        cellColour = qd.white;
+    } else if(state == TRI_TRUE) {
+        cellColour = qd.black;
+    }
+    Rect r;
+    SetRect(
+        &r,
+        xLeft,
+        yTop,
+        xRight -1,
+        yBottom-1
+    );
+                
+    FillRect(&r, &cellColour);
+
+    // Draw lines to the right and bottom to create a grid.
+    SetRect(
+        &r,
+        xLeft,
+        yBottom-1,
+        xRight,
+        yBottom
+    );
+    Pattern *pattern;
+    if(y5Div == 4) {
+        pattern = (state == TRI_FALSE? &qd.black : &qd.white);
+    } else {
+        pattern = (state == TRI_TRI? &qd.black : &qd.gray);
+    }
+    FillRect(&r, pattern);
+
+    SetRect(
+        &r,
+        xRight-1,
+        yTop,
+        xRight,
+        yBottom
+    );
+    if(x%5 == 4) {
+        pattern = (state == TRI_FALSE? &qd.black : &qd.white);
+    } else {
+        pattern = (state == TRI_TRI? &qd.black : &qd.gray);
+    }
+    FillRect(&r, pattern);
+}
+
 void drawPlayfield(Byte xx, Byte yy, Game *game) {
     Rect r;
     Point offset = getBitmapOffset(game);
-    SetRect(
-        &game->bitmap.bounds,
-        offset.h,
-        offset.v,
-        offset.h + xx * game->bitmap.width,
-        offset.v + yy * game->bitmap.width);
     for(Byte y=0;y<yy;y++) {
+        INTEGER yTop = y * game->bitmap.width + offset.v;
+        INTEGER yBottom = (y+1) * game->bitmap.width + offset.v;
+        INTEGER y5Div = y%5;
         for(Byte x=0;x<xx;x++) {
-            Pattern cellColour = qd.gray;
-            enum eTriState state = game->bitmap.guesses[y * GameMaxXY + x];
-            if(state == TRI_FALSE) {
-                cellColour = qd.white;
-            } else if(state == TRI_TRUE) {
-                cellColour = qd.black;
-            }
-            SetRect(
-                &r,
-                x     * game->bitmap.width + offset.h,
-                y     * game->bitmap.width + offset.v,
-                (x+1) * game->bitmap.width + offset.h-1,
-                (y+1) * game->bitmap.width + offset.v-1
-            );
-                        
-            FillRect(&r, &cellColour);
-
-            // Draw lines to the right and bottom to create a grid.
-            SetRect(
-                &r,
-                x     * game->bitmap.width + offset.h,
-                (y+1) * game->bitmap.width + offset.v-1,
-                (x+1) * game->bitmap.width + offset.h,
-                (y+1) * game->bitmap.width + offset.v
-            );
-            Pattern *pattern;
-            if(y%5 == 4) {
-                pattern = (state == TRI_FALSE? &qd.black : &qd.white);
-            } else {
-                pattern = (state == TRI_TRI? &qd.black : &qd.gray);
-            }
-            FillRect(&r, pattern);
-
-            SetRect(
-                &r,
-                (x+1) * game->bitmap.width + offset.h-1,
-                y     * game->bitmap.width + offset.v,
-                (x+1) * game->bitmap.width + offset.h,
-                (y+1) * game->bitmap.width + offset.v
-            );
-            if(x%5 == 4) {
-                pattern = (state == TRI_FALSE? &qd.black : &qd.white);
-            } else {
-                pattern = (state == TRI_TRI? &qd.black : &qd.gray);
-            }
-            FillRect(&r, pattern);
+            updateBit(game, x, y, &offset, y5Div, yTop, yBottom);
         }
     }
+
+    // Paint the outer frame. Otherwise it won't be outlined if x and/or y are divisible by 5.
+    FrameRect(&game->bitmap.bounds);
 }
 
 void drawGame() {
-    drawPlayfield(_game.x, _game.y, &_game);
     drawHints(&_game);
+    drawPlayfield(_game.x, _game.y, &_game);
 }
 
 
@@ -674,13 +720,6 @@ Point getBitAtPoint(const Point *p) {
 }
 
 /**
- * Returns true if the given point is in the rectangle, false otherwise.
- */
-bool isInside(const Point *point, const Rect *rect) {
-    return rect->left<=point->h<rect->right && rect->top<=point->v<=rect->bottom;
-}
-
-/**
  * Checks after every move if all black squares are uncovered.
  * White squares can remain indeterminate.
  * If so, it pops up a victory box.
@@ -704,7 +743,7 @@ void checkForUltimateVictory(const Game *game) {
  */
 Point toggleBit(const Point *mouse, const Point *lastPoint) {
     Point bit = getBitAtPoint(mouse);
-    if(bit.h<0 || bit.h >= _game.x || bit.v<0 || bit.v>_game.y) {
+    if(bit.h<0 || bit.h >= _game.x || bit.v<0 || bit.v>=_game.y) {
         Point none = { .h=-1, .v=-1 };
         return none;
     }
@@ -720,6 +759,12 @@ Point toggleBit(const Point *mouse, const Point *lastPoint) {
         _game.bitmap.guesses[bit.v* GameMaxXY + bit.h] = 2;
     }
     checkForUltimateVictory(&_game);
+
+    // Update bit.
+    Point offset = getBitmapOffset(&_game);
+    INTEGER yTop = bit.v * _game.bitmap.width + offset.v;
+    INTEGER yBottom = (bit.v+1) * _game.bitmap.width + offset.v;
+    updateBit(&_game, bit.h, bit.v, &offset, bit.v%5, yTop, yBottom);
     return bit;
 }
 
@@ -764,23 +809,16 @@ int main()
     InitCustomWDEF();
     InitCursor();
 
-    Rect r;
-    SetRect(&_initialWindowRect,0,38,520,330);
-
-    Point lastBit = { .h=-1, .v=-1 };
+    Point lastBit = { .h=-2, .v=-2 };
 
     for(;;) {
         EventRecord e;
         WindowRef win;
         ControlHandle c;
-char s[16];
+        char s[16];
 
         SystemTask();
         if(GetNextEvent(everyEvent, &e)) {
-            Point windowPoint = {
-                .h = e.where.h - _initialWindowRect.left,
-                .v = e.where.v - _initialWindowRect.top
-            };
             
             switch(e.what) {
                 case keyDown:
@@ -791,7 +829,6 @@ char s[16];
                     break;
                 case mouseDown:
                     switch(FindWindow(e.where, &win)) {
-                        // UpdateControls(&win, win->visRgn);
                         case inGoAway:
                             if(TrackGoAway(win, e.where)) {
                                 DisposeWindow(win);
@@ -809,11 +846,11 @@ char s[16];
                             break;
                         case inContent:
                             SelectWindow(win);
-                            if(win != _aboutBoxRef && (&windowPoint, &_game.bitmap.bounds)) {
-                                lastBit = toggleBit(&windowPoint, &lastBit);
-                                InvalRect(&_game.bitmap.bounds);
-                            }
+                            Point absoluteMousePoint = e.where;
                             GlobalToLocal(&e.where);
+                            if(win != _aboutBoxRef) {
+                                lastBit = toggleBit(&e.where, &lastBit);
+                            }
                             INTEGER controlClicked = FindControl(e.where, win, &c);
                             if(inThumb == controlClicked) {
                                 INTEGER oldValue = GetControlValue(c);
@@ -827,16 +864,12 @@ char s[16];
                             } else if(inUpButton == controlClicked) {
                                 // TODO: Figure out scrolling.
                                 TEPinScroll(0, 10, _aboutDocRecord.handle);
-                                // TrackControl(c, e.where, ScrollAboutText);
                             } else if(inDownButton == controlClicked) {
                                 TEPinScroll(0, -10, _aboutDocRecord.handle);
-                                // TrackControl(c, e.where, ScrollAboutText);
                             } else if(inPageUp == controlClicked) {
                                 TEPinScroll(0, 100, _aboutDocRecord.handle);
-                                // TrackControl(c, e.where, ScrollAboutText);
                             } else if(inPageDown == controlClicked) {
                                 TEPinScroll(0, -100, _aboutDocRecord.handle);
-                                // TrackControl(c, e.where, ScrollAboutText);
                             }
 
                             break;
@@ -849,18 +882,15 @@ char s[16];
                 case updateEvt:
                     DoUpdate((WindowRef)e.message);
                     // Listen for dragging across cells.
-
-                    if(lastBit.h != -1) {
-                        if(isInside(&windowPoint, &_game.bitmap.bounds)) {
-                            lastBit = toggleBit(&windowPoint, &lastBit);
-                            InvalRect(&_game.bitmap.bounds);
-                        }
+                    if(lastBit.h != -2) {
+                        GlobalToLocal(&e.where);
+                        lastBit = toggleBit(&e.where, &lastBit);
                     }
 
                     break;
                 case mouseUp:
-                    lastBit.h = -1;
-                    lastBit.v = -1;
+                    lastBit.h = -2;
+                    lastBit.v = -2;
                     break;
             }
         }        
