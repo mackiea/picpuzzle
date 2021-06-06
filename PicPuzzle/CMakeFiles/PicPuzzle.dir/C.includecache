@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/root/forks/Retro68/Samples/Project3/PicPuzzle.c
+stdio.h
+-
+string.h
+-
+malloc.h
+-
+Quickdraw.h
+-
+Windows.h
+-
+Menus.h
+-
+Fonts.h
+-
+Resources.h
+-
+TextEdit.h
+-
+TextUtils.h
+-
+Dialogs.h
+-
+Devices.h
+-
+PicPuzzle.h
+/root/forks/Retro68/Samples/Project3/PicPuzzle.h
+Puzzles.h
+/root/forks/Retro68/Samples/Project3/Puzzles.h
+
+/root/forks/Retro68/Samples/Project3/PicPuzzle.h
+
+/root/forks/Retro68/Samples/Project3/Puzzles.h
+

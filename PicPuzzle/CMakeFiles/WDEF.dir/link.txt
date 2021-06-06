@@ -1,0 +1,1 @@
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-gcc -O3 -DNDEBUG  -Wl,--mac-flat -Wl,-eMYWINDOWDEFPROC -Wl,-gc-sections CMakeFiles/WDEF.dir/wdef.c.obj  -o WDEF  -L/root/forks/Retro68-build/build-target/libretro 

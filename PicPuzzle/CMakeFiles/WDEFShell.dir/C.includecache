@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/root/forks/Retro68/Samples/Project3/wdefshell.c
+stdio.h
+-
+string.h
+-
+Quickdraw.h
+-
+Windows.h
+-
+Menus.h
+-
+Fonts.h
+-
+Resources.h
+-
+TextEdit.h
+-
+TextUtils.h
+-
+Dialogs.h
+-
+Devices.h
+-
+

@@ -1,0 +1,10 @@
+/root/forks/Retro68-build/toolchain/m68k-apple-macos/cmake/Platform/Retro68.cmake
+/root/forks/Retro68-build/toolchain/m68k-apple-macos/cmake/Platform/RetroPPC.cmake
+/root/forks/Retro68-build/toolchain/m68k-apple-macos/cmake/Platform/RetroCarbon.cmake
+/root/forks/Retro68-build/toolchain/m68k-apple-macos/cmake/add_application.cmake
+/root/forks/Retro68-build/toolchain/m68k-apple-macos/cmake/retro68.toolchain.cmake
+/root/forks/Retro68-build/toolchain/m68k-apple-macos/include/Retro68Runtime.h
+/root/forks/Retro68-build/toolchain/m68k-apple-macos/RIncludes/Retro68.r
+/root/forks/Retro68-build/toolchain/m68k-apple-macos/RIncludes/Retro68APPL.r
+/root/forks/Retro68-build/toolchain/m68k-apple-macos/lib/libretrocrt.a
+/root/forks/Retro68-build/toolchain/m68k-apple-macos/lib/libRetroConsole.a

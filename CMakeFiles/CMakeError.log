@@ -1,0 +1,56 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/root/forks/Retro68-build/toolchain/lib/gcc/m68k-apple-macos/9.1.0/../../../../m68k-apple-macos/bin/ld.real: cannot find -lretrocrt
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/root/forks/Retro68-build/toolchain/lib/gcc/m68k-apple-macos/9.1.0/../../../../m68k-apple-macos/bin/ld.real: cannot find -lretrocrt
+collect2: error: ld returned 1 exit status
+
+
+Determining if the include file OpenTransport.h exists failed with the following output:
+Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_567d6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_567d6.dir/build.make CMakeFiles/cmTC_567d6.dir/build
+make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_567d6.dir/CheckIncludeFile.c.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-gcc   -std=gnu99 -o CMakeFiles/cmTC_567d6.dir/CheckIncludeFile.c.obj   -c /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: OpenTransport.h: No such file or directory
+    1 | #include <OpenTransport.h>
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_567d6.dir/build.make:66: CMakeFiles/cmTC_567d6.dir/CheckIncludeFile.c.obj] Error 1
+make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_567d6/fast] Error 2
+
+
+Determining if the include file MacTCP.h exists failed with the following output:
+Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_67445/fast"
+/usr/bin/make -f CMakeFiles/cmTC_67445.dir/build.make CMakeFiles/cmTC_67445.dir/build
+make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_67445.dir/CheckIncludeFile.c.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-gcc   -std=gnu99 -o CMakeFiles/cmTC_67445.dir/CheckIncludeFile.c.obj   -c /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: MacTCP.h: No such file or directory
+    1 | #include <MacTCP.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_67445.dir/build.make:66: CMakeFiles/cmTC_67445.dir/CheckIncludeFile.c.obj] Error 1
+make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_67445/fast] Error 2
+
+

@@ -1,0 +1,597 @@
+The target system is: Retro68 - 1 - 
+The host system is: Linux - 4.19.0-8-686-pae - i686
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-gcc 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "/root/forks/Retro68-build/build-target/CMakeFiles/3.13.4/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-g++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "/root/forks/Retro68-build/build-target/CMakeFiles/3.13.4/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_92702/fast"
+/usr/bin/make -f CMakeFiles/cmTC_92702.dir/build.make CMakeFiles/cmTC_92702.dir/build
+make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_92702.dir/testCCompiler.c.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-gcc    -o CMakeFiles/cmTC_92702.dir/testCCompiler.c.obj   -c /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C static library libcmTC_92702.a
+/usr/bin/cmake -P CMakeFiles/cmTC_92702.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_92702.dir/link.txt --verbose=1
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ar qc libcmTC_92702.a  CMakeFiles/cmTC_92702.dir/testCCompiler.c.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ranlib libcmTC_92702.a
+make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8fc33/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8fc33.dir/build.make CMakeFiles/cmTC_8fc33.dir/build
+make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8fc33.dir/CMakeCCompilerABI.c.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-gcc    -o CMakeFiles/cmTC_8fc33.dir/CMakeCCompilerABI.c.obj   -c /usr/share/cmake-3.13/Modules/CMakeCCompilerABI.c
+Linking C static library libcmTC_8fc33.a
+/usr/bin/cmake -P CMakeFiles/cmTC_8fc33.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8fc33.dir/link.txt --verbose=1
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ar qc libcmTC_8fc33.a  CMakeFiles/cmTC_8fc33.dir/CMakeCCompilerABI.c.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ranlib libcmTC_8fc33.a
+make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(m68k-apple-macos-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_8fc33/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_8fc33.dir/build.make CMakeFiles/cmTC_8fc33.dir/build]
+  ignore line: [make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_8fc33.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-gcc    -o CMakeFiles/cmTC_8fc33.dir/CMakeCCompilerABI.c.obj   -c /usr/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C static library libcmTC_8fc33.a]
+  ignore line: [/usr/bin/cmake -P CMakeFiles/cmTC_8fc33.dir/cmake_clean_target.cmake]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8fc33.dir/link.txt --verbose=1]
+  ignore line: [/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ar qc libcmTC_8fc33.a  CMakeFiles/cmTC_8fc33.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ranlib libcmTC_8fc33.a]
+  ignore line: [make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp']
+  ignore line: []
+  implicit libs: []
+  implicit dirs: []
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3db68/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3db68.dir/build.make CMakeFiles/cmTC_3db68.dir/build
+make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3db68.dir/feature_tests.c.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-gcc   -std=c11 -o CMakeFiles/cmTC_3db68.dir/feature_tests.c.obj   -c /root/forks/Retro68-build/build-target/CMakeFiles/feature_tests.c
+Linking C static library libcmTC_3db68.a
+/usr/bin/cmake -P CMakeFiles/cmTC_3db68.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3db68.dir/link.txt --verbose=1
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ar qc libcmTC_3db68.a  CMakeFiles/cmTC_3db68.dir/feature_tests.c.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ranlib libcmTC_3db68.a
+make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c676e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c676e.dir/build.make CMakeFiles/cmTC_c676e.dir/build
+make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c676e.dir/feature_tests.c.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-gcc   -std=c99 -o CMakeFiles/cmTC_c676e.dir/feature_tests.c.obj   -c /root/forks/Retro68-build/build-target/CMakeFiles/feature_tests.c
+Linking C static library libcmTC_c676e.a
+/usr/bin/cmake -P CMakeFiles/cmTC_c676e.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c676e.dir/link.txt --verbose=1
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ar qc libcmTC_c676e.a  CMakeFiles/cmTC_c676e.dir/feature_tests.c.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ranlib libcmTC_c676e.a
+make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7ed8b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7ed8b.dir/build.make CMakeFiles/cmTC_7ed8b.dir/build
+make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7ed8b.dir/feature_tests.c.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-gcc   -std=c90 -o CMakeFiles/cmTC_7ed8b.dir/feature_tests.c.obj   -c /root/forks/Retro68-build/build-target/CMakeFiles/feature_tests.c
+Linking C static library libcmTC_7ed8b.a
+/usr/bin/cmake -P CMakeFiles/cmTC_7ed8b.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7ed8b.dir/link.txt --verbose=1
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ar qc libcmTC_7ed8b.a  CMakeFiles/cmTC_7ed8b.dir/feature_tests.c.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ranlib libcmTC_7ed8b.a
+make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6092d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6092d.dir/build.make CMakeFiles/cmTC_6092d.dir/build
+make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6092d.dir/testCXXCompiler.cxx.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-g++     -o CMakeFiles/cmTC_6092d.dir/testCXXCompiler.cxx.obj -c /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX static library libcmTC_6092d.a
+/usr/bin/cmake -P CMakeFiles/cmTC_6092d.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6092d.dir/link.txt --verbose=1
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ar qc libcmTC_6092d.a  CMakeFiles/cmTC_6092d.dir/testCXXCompiler.cxx.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ranlib libcmTC_6092d.a
+make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_31e9e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_31e9e.dir/build.make CMakeFiles/cmTC_31e9e.dir/build
+make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_31e9e.dir/CMakeCXXCompilerABI.cpp.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-g++     -o CMakeFiles/cmTC_31e9e.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX static library libcmTC_31e9e.a
+/usr/bin/cmake -P CMakeFiles/cmTC_31e9e.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31e9e.dir/link.txt --verbose=1
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ar qc libcmTC_31e9e.a  CMakeFiles/cmTC_31e9e.dir/CMakeCXXCompilerABI.cpp.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ranlib libcmTC_31e9e.a
+make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(m68k-apple-macos-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_31e9e/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_31e9e.dir/build.make CMakeFiles/cmTC_31e9e.dir/build]
+  ignore line: [make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_31e9e.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-g++     -o CMakeFiles/cmTC_31e9e.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX static library libcmTC_31e9e.a]
+  ignore line: [/usr/bin/cmake -P CMakeFiles/cmTC_31e9e.dir/cmake_clean_target.cmake]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31e9e.dir/link.txt --verbose=1]
+  ignore line: [/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ar qc libcmTC_31e9e.a  CMakeFiles/cmTC_31e9e.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ranlib libcmTC_31e9e.a]
+  ignore line: [make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp']
+  ignore line: []
+  implicit libs: []
+  implicit dirs: []
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++2a] compiler features compiled with the following output:
+Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_36400/fast"
+/usr/bin/make -f CMakeFiles/cmTC_36400.dir/build.make CMakeFiles/cmTC_36400.dir/build
+make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_36400.dir/feature_tests.cxx.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-g++    -std=c++2a -o CMakeFiles/cmTC_36400.dir/feature_tests.cxx.obj -c /root/forks/Retro68-build/build-target/CMakeFiles/feature_tests.cxx
+Linking CXX static library libcmTC_36400.a
+/usr/bin/cmake -P CMakeFiles/cmTC_36400.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36400.dir/link.txt --verbose=1
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ar qc libcmTC_36400.a  CMakeFiles/cmTC_36400.dir/feature_tests.cxx.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ranlib libcmTC_36400.a
+make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++17] compiler features compiled with the following output:
+Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d6fd7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d6fd7.dir/build.make CMakeFiles/cmTC_d6fd7.dir/build
+make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d6fd7.dir/feature_tests.cxx.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-g++    -std=c++17 -o CMakeFiles/cmTC_d6fd7.dir/feature_tests.cxx.obj -c /root/forks/Retro68-build/build-target/CMakeFiles/feature_tests.cxx
+Linking CXX static library libcmTC_d6fd7.a
+/usr/bin/cmake -P CMakeFiles/cmTC_d6fd7.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6fd7.dir/link.txt --verbose=1
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ar qc libcmTC_d6fd7.a  CMakeFiles/cmTC_d6fd7.dir/feature_tests.cxx.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ranlib libcmTC_d6fd7.a
+make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8e059/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8e059.dir/build.make CMakeFiles/cmTC_8e059.dir/build
+make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8e059.dir/feature_tests.cxx.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-g++    -std=c++14 -o CMakeFiles/cmTC_8e059.dir/feature_tests.cxx.obj -c /root/forks/Retro68-build/build-target/CMakeFiles/feature_tests.cxx
+Linking CXX static library libcmTC_8e059.a
+/usr/bin/cmake -P CMakeFiles/cmTC_8e059.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e059.dir/link.txt --verbose=1
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ar qc libcmTC_8e059.a  CMakeFiles/cmTC_8e059.dir/feature_tests.cxx.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ranlib libcmTC_8e059.a
+make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_60364/fast"
+/usr/bin/make -f CMakeFiles/cmTC_60364.dir/build.make CMakeFiles/cmTC_60364.dir/build
+make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_60364.dir/feature_tests.cxx.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-g++    -std=c++11 -o CMakeFiles/cmTC_60364.dir/feature_tests.cxx.obj -c /root/forks/Retro68-build/build-target/CMakeFiles/feature_tests.cxx
+Linking CXX static library libcmTC_60364.a
+/usr/bin/cmake -P CMakeFiles/cmTC_60364.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60364.dir/link.txt --verbose=1
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ar qc libcmTC_60364.a  CMakeFiles/cmTC_60364.dir/feature_tests.cxx.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ranlib libcmTC_60364.a
+make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9a6bf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9a6bf.dir/build.make CMakeFiles/cmTC_9a6bf.dir/build
+make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9a6bf.dir/feature_tests.cxx.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-g++    -std=c++98 -o CMakeFiles/cmTC_9a6bf.dir/feature_tests.cxx.obj -c /root/forks/Retro68-build/build-target/CMakeFiles/feature_tests.cxx
+Linking CXX static library libcmTC_9a6bf.a
+/usr/bin/cmake -P CMakeFiles/cmTC_9a6bf.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a6bf.dir/link.txt --verbose=1
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ar qc libcmTC_9a6bf.a  CMakeFiles/cmTC_9a6bf.dir/feature_tests.cxx.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ranlib libcmTC_9a6bf.a
+make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+m68k-apple-macos-gcc (GCC) 9.1.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Determining if the include file Navigation.h exists passed with the following output:
+Change Dir: /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_94a59/fast"
+/usr/bin/make -f CMakeFiles/cmTC_94a59.dir/build.make CMakeFiles/cmTC_94a59.dir/build
+make[1]: Entering directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_94a59.dir/CheckIncludeFile.c.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-gcc   -std=gnu99 -o CMakeFiles/cmTC_94a59.dir/CheckIncludeFile.c.obj   -c /root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C static library libcmTC_94a59.a
+/usr/bin/cmake -P CMakeFiles/cmTC_94a59.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94a59.dir/link.txt --verbose=1
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ar qc libcmTC_94a59.a  CMakeFiles/cmTC_94a59.dir/CheckIncludeFile.c.obj
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-ranlib libcmTC_94a59.a
+make[1]: Leaving directory '/root/forks/Retro68-build/build-target/CMakeFiles/CMakeTmp'
+
+

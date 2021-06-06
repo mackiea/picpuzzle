@@ -1,0 +1,1 @@
+/root/forks/Retro68-build/toolchain/bin/m68k-apple-macos-gcc -O3 -DNDEBUG  -Wl,-gc-sections CMakeFiles/PicPuzzle.dir/PicPuzzle.c.obj CMakeFiles/PicPuzzle.dir/wdef.c.obj  -o PicPuzzle.code.bin  -L/root/forks/Retro68-build/build-target/libretro 
